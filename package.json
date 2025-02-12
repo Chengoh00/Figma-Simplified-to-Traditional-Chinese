@@ -1,0 +1,19 @@
+{
+  "name": "figma-simplifiedtc-to-traditionalc",
+  "version": "1.0.0",
+  "description": "A Figma plugin to convert Simplified Chinese to Traditional Chinese",
+  "main": "code.js",
+  "scripts": {
+    "build": "webpack --mode=production"
+  },
+  "dependencies": {
+    "chinese-conv": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "babel-loader": "^9.1.3",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

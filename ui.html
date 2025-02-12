@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简体转繁体</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+      background-color: var(--figma-color-bg);
+      position: relative; /* 确保父元素是相对定位 */
+      height: 100vh; /* 使容器占满整个视窗高度 */
+      box-sizing: border-box; /* 包括 padding 在内 */
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+    .icon-text {
+      font-size: 40px;
+      color:var(--figma-color-text);
+      margin-bottom: 12px;
+    }
+    
+    button {
+      padding: 12px 16px;
+      font-size: 12px;
+      cursor: pointer;
+      color: var(--figma-color-text);
+      background-color: var(--figma-color-bg-brand);
+      border-radius: 8px;
+      width: calc(100% - 40px); /* 按钮宽度为容器宽度减去左右各20px */
+      margin: 0 auto; /* 确保按钮水平居中 */
+      bottom: 40px; /* 按钮距离底部 */
+      left: 20px; /* 确保按钮左侧有20px的间距 */
+      right: 20px; /* 确保按钮右侧有20px的间距 */
+      transition: background-color 0.3s; /* 添加过渡效果 */
+    }
+    button:hover {
+      background-color:var(--figma-color-bg-brand-hover);
+    }
+  </style>
+</head>
+<body>
+  <div class="icon-text">💬</div>
+  <button id="convert">Translate</button>
+  <script>
+    document.getElementById('convert').onclick = () => {
+      parent.postMessage({ pluginMessage: { type: 'convert' } }, '*');
+    }
+  </script>
+</body>
+</html>
