@@ -1,6 +1,8 @@
 import chineseConv from 'chinese-conv';
 
-figma.showUI(__html__, { themeColors: true, /* other options */ })
+figma.showUI(__html__, { 
+  themeColors: true,
+})
 
 figma.ui.onmessage = async msg => {
   if (msg.type === 'convert') {
