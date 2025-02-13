@@ -1,5 +1,5 @@
 {
-  "name": "figma-simplifiedtc-to-traditionalc",
+  "name": "figma-plugin-translate-to-traditional-chinese",
   "version": "1.0.0",
   "description": "A Figma plugin to convert Simplified Chinese to Traditional Chinese",
   "main": "code.js",
